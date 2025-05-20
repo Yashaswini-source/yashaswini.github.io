@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yashaswini Pottabhathula - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        /* Custom CSS for animations and interactivity */
+        .slide-in-left {
+            animation: slideInLeft 0.5s ease-out;
+        }
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .slide-in-right {
+            animation: slideInRight 0.5s ease-out;
+        }
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .scale-up {
+            transition: transform 0.2s ease-in-out;
+        }
+        .scale-up:hover {
+            transform: scale(1.05);
+        }
+        .tilt {
+            transition: transform 0.3s ease-in-out;
+        }
+        .tilt:hover {
+            transform: rotate(5deg);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-blue-500 text-white font-inter">
+    <header class="bg-transparent py-6 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Yashaswini P
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="hover:text-blue-300 transition duration-300">About</a></li>
+                    <li><a href="#experience" class="hover:text-blue-300 transition duration-300">Experience</a></li>
+                    <li><a href="#projects" class="hover:text-blue-300 transition duration-300">Projects</a></li>
+                    <li><a href="#skills" class="hover:text-blue-300 transition duration-300">Skills</a></li>
+                    <li><a href="#contact" class="hover:text-blue-300 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-gray-300 focus:outline-none" aria-label="Toggle Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-50">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-gray-300 focus:outline-none" aria-label="Close Menu">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="#about" class="block text-lg text-white hover:text-blue-300 transition duration-300">About</a></li>
+                    <li><a href="#projects" class="block text-lg text-white hover:text-blue-300 transition duration-300">Projects</a></li>
+                    <li><a href="#experience" class="block text-lg text-white hover:text-blue-300 transition duration-300">Experience</a></li>
+                    <li><a href="#skills" class="block text-lg text-white hover:text-blue-300 transition duration-300">Skills</a></li>
+                    <li><a href="#contact" class="block text-lg text-white hover:text-blue-300 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section id="home" class="py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+        <div class="max-w-7xl mx-auto text-center space-y-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 slide-in-left">
+                Hello, I'm Yashaswini Pottabhathula
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto fade-in">
+                I'm a Full Stack Developer passionate about building scalable and user-friendly web applications.
+            </p>
+            <a href="https://www.linkedin.com/in/yashaswini-p2024/" class="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300 scale-up">
+                Let's Connect
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800 rounded-lg shadow-lg">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                About Me
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="text-gray-300 text-lg sm:text-xl leading-relaxed slide-in-left">
+                    <p class="mb-4 text-justify">
+                        Hello! I'm Yashaswini, a Full Stack Developer with a strong foundation in building
+                        high-performance web applications. I have a Master's degree in Computer Engineering and
+                        Science from the University of South Florida and over 4+ years of professional experience.
+                    </p>
+                    <p class="mb-4 text-justify">
+                        I'm passionate about creating seamless user experiences and solving complex technical challenges.
+                        My expertise spans across front-end and back-end technologies, including React.js, Angular,
+                        Node.js, Spring Boot, and AWS.
+                    </p>
+                    <p>
+                        I'm a firm believer in clean, maintainable code and agile methodologies. I'm always eager to
+                        learn new technologies and collaborate with talented teams to deliver innovative solutions.
+                    </p>
+                </div>
+                <div class="flex justify-center rounded-lg shadow-lg scale-up">
+                    <img src="crop.jpg" alt="Yashaswini Pottabhathula" class="rounded-lg w-50 h-70 object-cover object-top">
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="experience" class="bg-gradient-to-r from-[#0f172a] to-[#1e3a8a]-400 py-16 px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Professional Experience
+            </h2>
+            <div class="pl-6 space-y-5 max-w-xl mx-auto">
+
+  <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow">
+    <!-- Your timeline or content -->
+     <div class="relative group">
+              <div class="absolute -left-26.5 top-0 w-3 h-3 rounded-full bg-white-600 ring-4 ring-white shadow-md"></div>
+                <div>
+                  <div class="text-lg font-semibold text-gray-800">Eva Eco Systems</div>
+                  <div class="italic text-gray-600">Frontend Developer</div>
+                  <div class="text-sm text-gray-600 mt-1">Jan 2025 – Present · Tampa, FL</div>
+                </div>
+              </div>
+     </div>
+     <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow">
+    <!-- Your timeline or content -->
+     <div class="relative group">
+              <div class="absolute -left-26.5 top-0 w-3 h-3 rounded-full bg-white-600 ring-4 ring-white shadow-md"></div>
+                <div>
+                  <div class="text-lg font-semibold text-gray-800">ICloud Teq</div>
+                  <div class="italic text-gray-600">Software Developer Intern</div>
+                  <div class="text-sm text-gray-600 mt-1">May 2024 – Dec 2024 · Tampa, FL</div>
+                </div>
+              </div>
+     </div>
+     <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow">
+    <!-- Your timeline or content -->
+     <div class="relative group">
+              <div class="absolute -left-26.5 top-0 w-3 h-3 rounded-full bg-white-600 ring-4 ring-white shadow-md"></div>
+                <div>
+                  <div class="text-lg font-semibold text-gray-800">Accenture Solutions Pvt Ltd</div>
+                  <div class="italic text-gray-600">Full Stack Developer</div>
+                  <div class="text-sm text-gray-600 mt-1">Aug 2018 – Dec 2022 · Hyderabad, IN</div>
+                </div>
+              </div>
+     </div>
+    </section>
+    
+
+    
+    <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800 rounded-lg shadow-lg">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Projects
+            </h2>
+            <div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-gray-700 rounded-lg shadow-md p-6 ">
+                    <h3 class="text-xl font-semibold text-white mb-4">Park My Ride</h3>
+                    <p class="text-gray-300 mb-4">
+                        A web platform for users to find, reserve, and manage parking spaces in real-time.
+                        Technologies used: React.js, Tailwind CSS, Spring Boot.
+                    </p>
+                    <!-- <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-300 font-semibold">View Project</a> -->
+                </div>
+                <div class="bg-gray-700 rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Weather App</h3>
+                    <p class="text-gray-300 mb-4">
+                        A responsive web application for real-time weather updates.
+                        Technologies used: React.js, Open Weather Map API.
+                    </p>
+                    <!-- <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-300 font-semibold">View Project</a> -->
+                </div>
+                <div class="bg-gray-700 rounded-lg shadow-md p-6 ">
+                    <h3 class="text-xl font-semibold text-white mb-4">AI Image Generator</h3>
+                    <p class="text-gray-300 mb-4">
+                         A web application to generate images through AI based on user input.
+                          Technologies used: HTML, CSS, JavaScript, AI image generation API.
+                    </p>
+                    <!-- <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-300 font-semibold">View Project</a> -->
+                </div>
+                <div class="bg-gray-700 rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Smart Ticket Booking System</h3>
+                    <p class="text-gray-300 mb-4">
+                        A platform for booking tickets for events, transport, and cinema.
+                        Technologies used: React.js, Angular, Spring Boot, MySQL.
+                    </p>
+                    <!-- <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-300 font-semibold">View Project</a> -->
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    
+    
+    <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Skills
+            </h2>
+
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">Java</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">Python</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">JavaScript</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">HTML5</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">CSS</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">MySQL</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">PostgreSQL</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">WordPress</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">C</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">Node.js</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">Bootstrap</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">TypeScript</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">Angular</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">Git</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">AWS</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">React.js</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">Docker</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">Spring Boot</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">Figma</h3>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 text-center border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white break-word">Visual Studio</h3>
+        </div>
+    </div>
+    </section>
+
+
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800 rounded-lg shadow-lg">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Contact Me
+            </h2>
+            <div class="text-center space-y-4">
+                <p class="text-lg text-gray-300">
+                    Feel free to reach out to me for any questions or opportunities.
+                </p>
+                <br>
+                <a href="mailto:yashujcd@gmail.com" class="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300 scale-up">
+                 Email: yashujcd@gmail.com
+            </a>
+            
+                </div>
+        </div>
+    </section>
+
+    <!-- <footer class="py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+        <p>&copy; 2025 Yashaswini Pottabhathula. All rights reserved.</p>
+    </footer> -->
+
+    <script>
+        consthamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const sections = document.querySelectorAll('section');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+        function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
